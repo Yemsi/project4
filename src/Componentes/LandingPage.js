@@ -2,6 +2,7 @@
 import "../styles.css";
 //image
 import logo from "../image/logo.svg";
+import logoGoogle from "../image/logoGoogle.svg";
 //react
 import React, { useEffect } from "react";
 import { useContext } from "react";
@@ -29,7 +30,10 @@ function LandingPage() {
       <div className="welcome-zone">
         <h2>Welcome developer!</h2>
         <p>Please sign in to be part of our community.</p>
-        <button onClick={login}>Sign in with Google</button>
+        <button className="button-line" onClick={login}>
+          <img className="logoGoogle" src={logoGoogle} alt="google" />
+          <p className="button-text">Sign in with Google</p>
+        </button>
       </div>
     </div>
   );

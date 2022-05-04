@@ -28,7 +28,7 @@ function TweetsList() {
         return <Tweet key={object.id} tweetData={object} />;
       })
     ) : (
-      <div className="loading"></div>
+      <div className="cargando, espere un  momento"></div>
     )}
     </div>
   );
