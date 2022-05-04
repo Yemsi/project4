@@ -3,11 +3,20 @@ import UseTweet from './UseTweet';
 import Tweet from "./Tweet";
 import './App.css';
 
-export const ListTweets = () => {
+const { getAllDocs } = useTweetCollection();
+const { listaTweets } = useContext(TweetsContext);
+
+
+
+const ListTweets = () => {
+    useEffect(() => {
+
+    }, []);
+
     return (
         <div className='listWrapper'>
-            {listaTweet.length > 0 ? 
-            listaTweet.map((element) => (
+            {listaTweets.length > 0 ? 
+            listaTweets.map((element) => (
                 <Tweet
                 key={element.id}
                 id={element.id}
