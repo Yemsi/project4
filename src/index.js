@@ -1,16 +1,20 @@
+// react
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-//import './index.css';
-//import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //contextos
 import TweetsProvider from "./context/TweetContext";
 import UserProvider from "./context/UserContext";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+//routes
 import LandingPage from "./Componentes/LandingPage";
 import TweetsView from "./Componentes/tweetsView";
+import Profile from "./Componentes/Profile";
 
+//useNavigate
+//https://www.geeksforgeeks.org/reactjs-usenavigate-hook/
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,12 +25,12 @@ root.render(
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/home" element={<TweetsView />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </BrowserRouter>
       </TweetsProvider>
     </UserProvider>
-  
   </React.StrictMode>
 );
-
+//nueva version de react
 reportWebVitals();

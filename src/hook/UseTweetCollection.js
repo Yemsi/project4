@@ -47,7 +47,7 @@ function useTweetCollection() {
   };
 
   const addLikes = async (tweetId) => {
-    const docRef = await doc(tweetsCollectionRef, tweetId);
+    const docRef = await doc(tweetsCollectionRef, tweetId); //*no tiene efecto el await
     const docSnap = await getDoc(docRef);
 
     await updateDoc(docRef, {

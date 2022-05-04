@@ -1,3 +1,5 @@
+//style
+import "../styles.css";
 import React, { useContext, useEffect } from "react";
 import { TweetsContext } from "../context/TweetContext";
 import useTweetCollection from "../hook/UseTweetCollection";
@@ -12,15 +14,22 @@ function TweetsList() {
       const allTweets = await getTweets();
     };
     getTweetsAsync();
+
+    //para mantener la página abierta
+    setTimeout(() => {
+      getTweetsAsync();
+    }, 7000);
   }, []);
 
   return (
-    <div>
-      {tweetsArray.length > 0
-        ? tweetsArray.map((object) => {
-            return <Tweet key={object.id} tweetData={object} />;
-          })
-        : "0 tweets"}
+    <div className="tweetsList">
+    {tweetsArray.length > 0 ? (
+      tweetsArray.map((object) => {
+        return <Tweet key={object.id} tweetData={object} />;
+      })
+    ) : (
+      <div className="loading"></div>
+    )}
     </div>
   );
 }
