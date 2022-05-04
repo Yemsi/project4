@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import "./styles.css";
+import React, { useState, useContext  } from "react";
 import useTweetCollection from "./hook/UseTweetCollection";
+import { UserContext } from "./contexts/UserContext";
 
-import "./index.css";
+
 
 const TweetForm = () => {
   const [formState, setFormState] = useState({
@@ -10,54 +12,50 @@ const TweetForm = () => {
   });
 
   // custom hook
- const { addNewTweet } = useTweetCollection();
+  const [formstate, setFormstate] = useState(initialState);
 
+  //desestructuring 
+  const { user } = useContext(UserContext);
+  const { addNewTweet } = useTweetCollection();
+
+  //handles
   const handleChange = (e) => {
-    setFormState({
-      ...formState,
-      [e.target.name]: e.target.value,
+    setFormstate({
+      ...formstate,
+      text: e.target.value,
+      userInfo: {
+        author: user ? user.displayName : "Unknown",
+        uid: user && user.uid,
+        email: user && user.email,
+      },
     });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    addNewTweet(formstate);
 
-    // enviar la data a Firestore
-    // crear un documento en la coleccion de tweets
-    console.log("🚀 ~ Data to firestore:", formState);
-    addNewTweet(formState);
-
-    // reset
-    setFormState({
-      tweet: "",
-      author: "",
-    });
+    setFormstate(initialState);
   };
 
   return (
-    <div>
-      <form className="form" onSubmit={handleSubmit}>
-        <textarea
-          placeholder="escribe tu tweet"
-          name="tweet"
-          autoComplete="off"
-          onChange={handleChange}
-          value={formState.tweet}
-        />
+    <div className="form-area">
+    <img className="photo" src={user.photoURL} alt="profile" />
+    <form className="form" onSubmit={handleSubmit}>
+      <textarea
+        className="text-area"
+        placeholder="What's happening?"
+        name="tweet"
+        value={formstate.text}
+        onChange={handleChange}
+      />
+      <button className="post-button" type="submit">
+        POST
+      </button>
+    </form>
+  </div>
+);
+}
 
-        <div>
-          <input
-            placeholder="Author"
-            name="author"
-            autoComplete="off"
-            value={formState.author}
-            onChange={handleChange}
-          />
-          <button type="submit">Enviar tweet</button>
-        </div>
-      </form>
-    </div>
-  );
-};
 
 export default TweetForm;

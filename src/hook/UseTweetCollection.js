@@ -1,82 +1,63 @@
 import { useContext } from "react";
 import {
-    addDoc,
-    getDoc,
- //   getDocs,
- //   doc,
-  //  deleteDoc,
- //   updateDoc,
+  addDoc,
+  getDocs,
+  doc,
+  deleteDoc,
+  updateDoc,
+  getDoc,
 } from "firebase/firestore";
-import { tweetsCollectionRef } from "../firebase/configFirrebase.js";
-//import { TweetsContext } from "../contexts/TweetsContext";
+import { tweetsCollectionRef } from "../firebase/config";
+import { TweetsContext } from "../contexts/TweetsContext";
 
 function useTweetCollection() {
-  // Consumimos el contexto
-   // const { setListaTweets } = useContext(TweetsContext);
+  const { setTweetsArray } = useContext(TweetsContext);
 
-// Get all docs    
-const getAllDocs = async () => {
-  try {
-        const querySnapshot = await getDocs(tweetsCollectionRef);
-
-        const tweetsArray = querySnapshot.docs.map((doc) => {
-        return {
-            ...doc.data(),
-                };
-      });
-      console.log(
-      "🚀 ~ file: useTweetCollection.js ~ line 16 ~ tweetsArray ~ tweetsArray",
-      tweetsArray     );
-
-//       // actualizar mi Arreglo Global de tweets
-//         setListaTweets(tweetsArray);
-//     } catch (e) {
-//         console.log(e);
-//     }
-//     };
-
-  // add Doc (add tweet)
-    const addNewTweet = async (tweetObject) => {
+  const getTweets = async () => {
     try {
-        const docRef = await addDoc(tweetsCollectionRef, tweetObject);
-        console.log("Document written with ID: ", docRef.id);
-      // get updated docs
-        //await getAllDocs();
+      const querySnapshot = await getDocs(tweetsCollectionRef);
+      const tweetsCollectionArray = querySnapshot.docs.map((doc) => {
+        return {
+          ...doc.data(),
+          id: doc.id,
+        };
+      });
+      setTweetsArray(tweetsCollectionArray);
     } catch (e) {
-        console.error("Error adding document: ", e);
+      console.log(e);
     }
-    };
+  };
 
-//   // delete docuemnt
-//     const deleteTweet = async (idDocument) => {
-//     console.warn("Eliminand doc: ", idDocument);
-//     // get doc reference
-//     const refDocument = doc(tweetsCollectionRef, idDocument);
+  const addNewTweet = async (tweetObject) => {
+    try {
+      const docRef = await addDoc(tweetsCollectionRef, tweetObject);
+      await getTweets();
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  };
 
-//     // borramos
-//     await deleteDoc(refDocument);
+  const deleteTweet = async (tweetId) => {
+    try {
+      await deleteDoc(doc(tweetsCollectionRef, tweetId));
+      await getTweets();
+    } catch (e) {
+      console.error("Error deleting document: ", e);
+    }
+  };
 
-//     // get updated docs
-//     await getAllDocs();
-//     };
+  const addLikes = async (tweetId) => {
+    const docRef = await doc(tweetsCollectionRef, tweetId);
+    const docSnap = await getDoc(docRef);
 
-//   // add likes
-//     const addLikes = async (idDocument) => {
-//     const docRef = await doc(tweetsCollectionRef, idDocument);
-//     console.log("Adding likes...", idDocument);
-//     const docSnap = await getDoc(docRef);
+    await updateDoc(docRef, {
+      likes: docSnap.data().likes ? docSnap.data().likes + 1 : 1,
+    });
 
-//     await updateDoc(docRef, {
-//         likes: docSnap.data().likes ? docSnap.data().likes + 1 : 1,
-//     });
+    await getTweets();
+  };
 
-//     // get updated docs
-//     await getAllDocs();
-//     };
-
-    return { addNewTweet, 
-      //getAllDocs, deleteTweet, addLikes 
-    };
+  return { addNewTweet, getTweets, deleteTweet, addLikes };
 }
 
 export default useTweetCollection;
