@@ -7,8 +7,8 @@ import {
   updateDoc,
   getDoc,
 } from "firebase/firestore";
-import { tweetsCollectionRef } from "../firebase/config";
-import { TweetsContext } from "../contexts/TweetsContext";
+import { tweetsCollectionRef } from "../firebase/configFirrebase";
+import { TweetsContext } from "../context/TweetContext";
 
 function useTweetCollection() {
   const { setTweetsArray } = useContext(TweetsContext);

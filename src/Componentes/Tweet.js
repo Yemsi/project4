@@ -1,13 +1,14 @@
-import React, {useContext} from 'react';
-import UseTweet from './UseTweet';
-import "./styles.css"
+//style
+import "../styles.css";
 //image
-import trashcan from "./image/erase.svg";
-import heart from "./images/heart.svg";
+import trashcan from "../image/erase.svg";
+import heart from "../image/heart.svg";
+//react
+import React, {useContext} from 'react';
 //hook
-import useTweetCollection from "./hook/UseTweetCollection";
+import useTweetCollection from "../hook/UseTweetCollection";
 //context
-import { UserContext } from "./contexts/UserContext";
+import { UserContext } from "../context/UserContext";
 
 
 export const Tweet = ({ tweetData }) => {

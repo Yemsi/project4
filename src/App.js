@@ -1,36 +1,22 @@
-import './App.css';
-
-import { tweetsCollectionRef } from "./firebase/configFirrebase";
-import {addDoc, collection, getDocs} from "firebase/firestore";
-import { useEffect } from "react";
-import TweetForm from './TweetForm';
-
+import "./styles.css";
+//import LandingPage from "./Componentes/LandingPage";
+//import TweetsView from "./Componentes/tweetsView";
+import { useContext } from "react";
+import { UserContext } from "./contexts/UserContext";
+import { 
+  //Routes, 
+  //Route, 
+  useNavigate 
+} from "react-router-dom";
+//import { useEffect } from "react/cjs/react.production.min";
 
 function App() {
+  const { user } = useContext(UserContext);
+  const navigate = useNavigate();
 
-useEffect ( ()=> {       
-//1. subir tweet a firebase
-const addTestDoc = async () => {
-    try {
-        const docRef = await addDoc( tweetsCollectionRef,{
-          tweet: "1",
-          author: "3",
-          likes: 0, 
-        });
-        console.log ("document id:", docRef.id);
-        } catch (e){
-            console.error ("error adding doc:", e)
-        }
-    
-    }
-    addTestDoc()
-}, []);
+  user ? navigate("/home") : navigate("/landing");
 
-  return (
-    <div className="App">
-      <TweetForm/>
-    </div>
-  );
+  return <div className="App">hola</div>;
 }
 
 export default App;
