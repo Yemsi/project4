@@ -18,7 +18,7 @@ function TweetsList() {
     //para mantener la página abierta
     setTimeout(() => {
       getTweetsAsync();
-    }, 7000);
+    }, 70000);
   }, []);
 
   return (
@@ -28,7 +28,7 @@ function TweetsList() {
         return <Tweet key={object.id} tweetData={object} />;
       })
     ) : (
-      <div className="cargando, espere un  momento"></div>
+      <div className="loading"></div>
     )}
     </div>
   );

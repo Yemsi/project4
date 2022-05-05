@@ -9,6 +9,7 @@ import {
 } from "firebase/firestore";
 import { tweetsCollectionRef } from "../firebase/configFirrebase";
 import { TweetsContext } from "../context/TweetContext";
+import Swal from 'sweetalert2';
 
 function useTweetCollection() {
   const { setTweetsArray } = useContext(TweetsContext);
@@ -41,6 +42,12 @@ function useTweetCollection() {
     try {
       await deleteDoc(doc(tweetsCollectionRef, tweetId));
       await getTweets();
+      await Swal.fire({
+        title: 'Delete',
+        text: 'Do you want to continue?',
+        icon: 'error',
+        confirmButtonText: 'ok'
+      })
     } catch (e) {
       console.error("Error deleting document: ", e);
     }

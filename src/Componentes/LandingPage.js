@@ -28,11 +28,13 @@ function LandingPage() {
         <img className="logo" src={logo} alt="main-logo" />
       </div>
       <div className="welcome-zone">
-        <h2>Welcome developer!</h2>
+        <h1>Welcome developer!</h1>
+        
         <p>Please sign in to be part of our community.</p>
         <button className="button-line" onClick={login}>
           <img className="logoGoogle" src={logoGoogle} alt="google" />
           <p className="button-text">Sign in with Google</p>
+          <hr/>
         </button>
       </div>
     </div>

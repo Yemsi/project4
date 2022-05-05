@@ -1,52 +1,74 @@
-import React, { useContext, useEffect } from "react";
-import { UserContext } from "../../contexts/UserContext";
-import "./styles.css";
-import logo2 from "../../images/group-2.svg";
-import { Link } from "react-router-dom";
-import useGoogleAuthentication from "../../hooks/useAuthentication";
+//style
+import "../styles.css";
+//image
+import logo2 from "../image/group-2.svg";
+import post from "../image/post.svg";
+//react
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { TweetsContext } from "../../contexts/TweetsContext";
-import Tweet from "../Tweet/tweet";
+import { Link } from "react-router-dom";
+//context
+import { UserContext } from "../context/UserContext";
+import { TweetsContext } from "../context/TweetContext";
+//hook
+import useGoogleAuthentication from "../hook/UseAuthentication";
+import Tweet from "../Componentes/Tweet";
 
 function Profile() {
-    const navigate = useNavigate();
+
+  const [fondo, setFondo] = useState(true);
+
     const { logout } = useGoogleAuthentication();
-    const { tweetsArray } = useContext(TweetsContext);
+    const navigate = useNavigate();
     const { user } = useContext(UserContext);
-
+    const { tweetsArray } = useContext(TweetsContext);
+  
     useEffect(() => {
-    if (user === null) {
-    navigate("/");
-    }
+      if (user === null) {
+        navigate("/");
+      }
     }, [user]);
-
+  
     const myTweets = tweetsArray.filter(
-    (tweet) => tweet.userInfo?.uid === user?.uid
+      (tweet) => tweet.userInfo?.uid === user?.uid
     );
+  
+//console.log("myTweets",myTweets);
 
     return (
-    <div>
+      <div>
         <div className="header-profile">
-            <Link to="/home">
+          <Link to="/home">
             <img className="logo-profile" src={logo2} alt="logo-flag" />
-            </Link>
-            <button className="logout" onClick={logout}>
+          </Link>
+          <button className="logout" onClick={logout}>
             LOGOUT
-            </button>
+          </button>
         </div>
         <div className="middle">
-            <img className="profile-picture" src={user?.photoURL} alt="none" />
-            <span className="profile-name">{user?.displayName}</span>
+          <img className="profile-picture" src={user?.photoURL} alt="foto" />
+          <span className="profile-name">{user?.displayName}</span>
         </div>
+        <div className='button_select'>
+                <button fondo="fondo" onClick={() => setFondo(!fondo)}  className={`${fondo ? "dark": "button_active"}`} >
+                        {` ${fondo ? "" : "POST"}`}
+                </button>
+                <button  fondo="fondo" onClick={() => setFondo(!fondo)} className={`${!fondo ? "dark": "button_active"}`}>
+                  {` ${!fondo ? "" : " FAVORITES"}`}
+
+                    </button>
+            </div>
         <div className="posts">
-            {myTweets.length > 0
+          {myTweets.length > 0
             ? myTweets.map((userTweet) => {
-                return <Tweet key={userTweet.id} tweetData={userTweet} />;
-                })
+                return <Tweet 
+                key={userTweet.id} 
+                tweetData={userTweet} />;
+              })
             : "You don't have any tweets"}
         </div>
-    </div>
-);
-}
-
-export default Profile;
+      </div>
+    );
+  }
+  
+  export default Profile;
