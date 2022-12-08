@@ -1,383 +1,549 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Fruktur&family=Inter:wght@400;700&family=Irish+Grover&family=Press+Start+2P&family=Roboto:wght@500&display=swap');
 
 * {
   box-sizing: border-box;
-  /*font-family: "Roboto", sans-serif;*/
+  font-family: 'Fira Code', monospace;
   margin: 0px;
   padding: 0px;
 }
-p{
-  color: #fff;
-}
-/*General*/
 :root {
-  --color-dark:  #2E132C;
-  ;
+  --color-white:  #FFFFFF;
+  --color-red: #F50D5A;
+  --color-orange: #FF865C;
+  --color-yellow: #FFEA5C;
+  --color-green: #00DA76;
+  --color-blue: #0096CE;
+  --color-purple: #800FFF;
+  --color-text-back:#914D8B;
+  --color-line:#60265B;
+  --color-back:#2E132C;
+  --color-background: #150714;
 }
 .App {
-  background-color: var(--color-dark);
-}
-/*Form*/
-
-.form-area {
+  background-color: var(--color-back);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  height: 250px;
-  background-color: #150714;
-  padding: 60px 0;
+  /*align-items: center;*/
 }
 
-.photo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 5px;
+html{
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+a{
+  text-decoration: none;
 }
 
-.form {
+/*Font*/
+h1, h2, p, .white-font {
+  color: var(--color-white);
+}
+
+h1, h2, .register-name, .register-button, .font-press-2p, .user-name {  
+  font-family: 'Press Start 2P';
+  text-transform: uppercase;
+  letter-spacing: 2px; 
+}
+
+h1, h2, .register-name {  
+  width: 100px;
+  line-height:40px; 
+  margin: 20px 0;
+  /*padding: 4px 10px;*/
+}
+
+.red-font {
+  color: var(--color-red);
+}
+.text-font p{
+  color: var(--color-text-back);
+}
+
+/*Align*/
+.inline-block{
+  display: inline-block;
+}
+
+.column {
   display: flex;
   flex-direction: column;
 }
 
-.text-area {
-  width: 350px;
-  height: 100px;
-  background-color: #250c23;
-  color: #fff;
-}
-
-.post-button {
-  width: 70px;
-  margin-top: 5px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: bold;
-  font-size: 15px;
-  background-color: #250c23;
-  border: none;
-  padding: 4px 10px;
-}
-
-
-.post-button:hover {
-  cursor: pointer;
-}
-
-/*TweetList*/
-
-.tweetsList {
-  height: 100%;
-  background-color: #250c23;
-}
-
-.loading {
+.flex-between-center{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
-.loading::after {
-  content: "";
-  width: 40px;
-  height: 40px;
-  border: 10px solid #dddddd;
-  border-top-color: #60256b;
-  border-radius: 50%;
-  animation: loading 1s linear infinite;
-}
-
-@keyframes loading {
-  to {
-    transform: rotate(1turn);
-  }
-}
-
-/*Tweet*/
-
-.tweet-card {
-  display: flex;
-  justify-content: center;
-  background-color: #250c23;
-  padding-top: 20px;
-  padding-bottom: 40px;
-}
-
-.username {
-  font-size: 20px;
-  color: #fff;
-  padding-left: 5px;
-}
-
-.email {
-  color: #fff;
-  font-size: 12px;
-}
-
-.photo-tweet {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.tweet-text-area {
-  width: 350px;
-  color: #fff;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 15px;
-  padding-left: 5px;
-  padding-top: 5px;
-}
-
-.likes {
+.align-center {
   display: flex;
   align-items: center;
-  padding-top: 15px;
-  padding-bottom: 10px;
 }
 
-.heart:hover {
+.mg-auto{
+  margin: auto;
+}
+
+button {
   cursor: pointer;
+  background-color: transparent;
+  /*box-sizing: border-box;
+  color: white;  */
+  margin: 20px 0px;
 }
 
-.number-likes {
-  color: #f50d5a;
-  padding-left: 5px;
-}
-
-.line {
-  color: #60265b;
-}
-
-.trashcan-button {
-  background: none;
+input,
+button,
+textarea{
   border: none;
-  display: flex;
+  outline: none;
 }
 
-.trashcan-button:hover {
-  cursor: pointer;
+/*Bordes*/
+.border-yellow{
+  border: 5px var(--color-yellow) solid;
+}
+.border-orange{
+  border: 5px var(--color-orange) solid;
+}
+.border-red{
+  border: 5px var(--color-red) solid;
+}
+.border-green{
+  border: 5px var(--color-green) solid;
+}
+.border-blue{
+  border: 5px var(--color-blue) solid;
+}
+.border-purple{
+  border: 5px var(--color-purple) solid;
+}
+.bg-font{
+  background-color: var(--color-back);
+  color:var(--color-background);
+  padding: 10px;
 }
 
-/*Landing*/
+/****NUEVO*****/
 
-/* * {
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-} */
+/*1. Authetification*/
+/*1.1. LayoutAuth*/
 
-body > #root > div {
-  height: 100vh;
-  width: 100%;
-}
-
-.initial-page {
-  background-color: #2e132c;
-  height: 100%;
-  display: flex;
+.layout-auth{
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: auto;
+  padding: 0 50px;
+  /*display: flex;
+  align-items: center;*/
   justify-content: space-evenly;
-  align-items: center;
 }
 
-.logo {
-  width: 400px;
+.logo-flag-container{
+  display: grid;
+  place-items: center;
+  /*padding: 124px 0;*/
+  margin: 0 60px 0 0;
 }
 
-.welcome-zone {
-  display: flex;
-  flex-direction: column;
+.logo-flag{
+  width: 270px;
+  height: 165px;
+}
+
+span,
+.delete-alert button
+/*.name-google */
+{
+  text-align: center;
+  color: var(--color-white);
+}
+
+.welcome-container {
+  /* flex-direction: column;
+  display: flex;*/
   padding: 30px;
 }
 
-.line1 {
-  color: #fff;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: bold;
-  font-size: 50px;
-  padding-bottom: 35px;
+/****************************************************************************************************/
+/*1.2. Register*/
+
+.register-username{
+  padding: 10px ;
+  background-color: var(--color-background);
+  /*color: var(--color-white);*/
+  }
+
+.register-username::placeholder{
+  color: var(--color-text-back);
 }
 
-.line2 {
-  color: #fff;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 20px;
-  padding-bottom: 35px;
-}
+.radio-container input{
+    appearance: none;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+  }
 
-.button-line {
-  background-color: #4285f4;
-  display: flex;
+.radio-container input:hover,
+.radio-container input:checked {
+      outline: 4px solid var(--color-white);
+  }
+
+.register-button{
+  /*background-color: var(--color-green);*/
+  padding: 10px;
+  /*font-family: 'Press Start 2P', cursive;
+  letter-spacing: 2px;*/
+  
+  /*
   align-items: center;
-  width: 350px;
-  border: none;
-  border-radius: 2px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  width: 250px;
+  font-size: 16px;*/
 }
 
-.button-line:hover {
+input[value=red],
+.bg-red {
+  background-color: var(--color-red);
+}
+input[value=yellow],
+.bg-yellow {
+  background-color: var(--color-yellow);
+}
+input[value=orange],
+.bg-orange {
+  background-color: var(--color-orange);
+}
+input[value=blue],
+.bg-blue {
+  background-color: #0096CE;
+}
+input[value=purple],
+.bg-purple {
+  background-color: var(--color-purple);
+}
+input[value=green],
+.bg-green,
+.button:hover,
+.button-post:hover,
+.register-button {
+  background-color: #00DA76;
+  ;
+}
+
+.welcome-button {
+  background-color: #4285f4;
+  border-radius: 4px;
+  width: 350px;
+  /*border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;*/
+  /*margin: 20px 0;
+  /*display: flex;
+  align-items: center;*/
+}
+
+.welcome-button:hover {
   cursor: pointer;
 }
 
 .logoGoogle {
-  background-color: #fff;
+  background-color: var(--color-white);
   padding: 5px;
-  width: 10%;
-  border-radius: 2px 0 0 2px;
+  border-radius: 4px 0 0px 4px;
 }
 
-.button-text {
-  color: #fff;
+.welcome-button-text {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 20px;
   align-items: center;
   width: 90%;
 }
 
-/*Profile*/
-.header-profile {
-  display: flex;
-  justify-content: center;
-  justify-content: space-around;
-  align-items: center;
-  height: 50px;
-  background-color: #250c23;
-}
+/***********************************************************************************************/
+/*3. Tweet********/
+/*3.1. DeleteAlert*/
 
-.logo-profile {
-  width: 30px;
-}
-
-.logout {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-  padding: 3px 8px;
-  background-color: #f50d5a;
-  border: none;
-}
-
-.logout:hover {
-  cursor: pointer;
-}
-
-.middle {
-  height: 275px;
-  background-color: #150714;
+.alert {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+  /*background-color: white;*/
 }
 
-.posts {
-  height: 100%;
-  background-color: #250c23;
+.delete-alert {
+  /*flex-direction: column;
+  display: flex;*/
+  width: 300px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.delete-alert button{
+  width: 60px;
 }
 
-.profile-picture {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-}
-
-.profile-name {
-  color: aliceblue;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-}
-
-/*Header*/
+/*3.2. HeaderFeed******************************************************/
 
 .header {
-  display: flex;
+  /*display: flex;
+  align-items: center;*/
   justify-content: center;
-  align-items: center;
-  height: 50px;
-  background-color: #250c23;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  background-color: var(--color-back);
 }
 
-.header-content {
-  width: 30%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.photo-header {
-  width: 25px;
-  height: 25px;
+.header-photo{
+  width: 33px;
+  height: 33px;
   border-radius: 50%;
 }
 
-.logo2 {
-  width: 30px;
-  margin-left: 60px;
+.logo-flag-distance{
+  margin: 0px 100px 0px 100px;
 }
 
-.logo1 {
-  width: 140px;
+.logo-flag-min {
+  width: 50px;
+  /*padding: 5px;*/
+}
+.logo-DevUnited {
+  width: 160px;
 }
 
-/*botones profile*/
-.button_select  {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #250c23;
+.logo-header-container{
+  height: 100%;
 }
-h1{  
-  width: 200px;
-  margin-top: 0px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+/*3.3. HeaderProfile*/
+.pd-1{
+  margin: 0px 350px 0px 0px;
+}
+
+.arrowback{
+  margin-right:20px;
+}
+
+.header-username {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+/*.font-press-2p {
+  font-family: 'Press Start 2P', cursive;
   font-weight: bold;
-  font-size: 45px;
-  color: white;
-  border: none;
-  padding: 4px 10px;
+}*/
 
+/*3.4. ListTweets**************/
+
+.list-tweets {
+  /* flex-direction: column;
+  display: flex;*/
+  max-width: 60%;
+  min-width: 350px;
 }
 
-h2{
-  
-    width: 200px;
-    margin-top: 0px;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+/*3.5. Tweet*************/
+
+.tweet-container {
+  display: flex;
+  padding: 20px 10px;
+  border-bottom: 2px var(--color-text-back) solid;
+  width: 100%;
+}
+.img-user, 
+.tweet-user-img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 20px 0 0px;
+}
+
+.img-user-span{
+  padding: 6px;
+  border-radius: 0 0 0 5px;
+  margin: 0 auto 10px auto;
+}
+
+.tweet-info {
+  /*flex-direction: column;
+  display: flex;*/
+  flex: 2;
+  padding: 10px;
+}
+
+.tweet-header .button {
+      height: 15px;
+      width: 15px;
+  }
+
+.user-name {
+    color: var(--color-background);
+    padding: 4px;
+    border-radius: 0 0 0 5px;
+    /*font-size: 16px;
     font-weight: bold;
-    font-size: 15px;
-    background-color: red;
-    border: none;
-    padding: 4px 10px;
-  
+    letter-spacing: 2px;
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;*/
 }
 
+.trash-button {
+    height: 15px;
+    width: 15px;
+    margin: 5px;
+}
 
-.dark{
-  background-color: #250c23;
-  border: none;
+.tweet-text {
+  padding: 5px 0 5px;
 }
-.button_fav:hover,
-.button_post:hover {
-  cursor: pointer;
+
+.tweet-like {
+  /*display: flex;
+  align-items: center;*/
+  padding: 10px;
+
 }
-.button_active {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: bold;
+.tweet-like .button {
+  width: 20px;
+  height: 20px;
+
+}
+.tweet-like img{
+  width: 30px;
+  height: 30px;
+}
+.tweet-like span{
+  padding: 5px;
+}
+
+/*3.6. TweetForm**********/
+
+.main-form{
+  padding: 10px 0px 0px 0px;
+  display: flex;
+  background-color: var(--color-background);
+  border-bottom: 2px var(--color-text-back) solid;
+}
+
+.form-img-cointener {
+  display: flex;
+}
+
+.form-text-area {
+  width: 100%;
+  padding: 5px;
+  height: 120px;
+  font-size: 20px;
+  background-color: var(--color-back);
+  color: var(--color-text-back);
+}
+.form-text-area::placeholder{
+  color: var(--color-text-back);
+}
+
+.form-counter{
+  padding: 5px 0 0 0;
+}
+
+.form span, 
+.text-font p,
+.delete-alert p {
   font-size: 14px;
-  padding: 3px 8px;
-  background-color: #60265B;
-  border: none;
 }
-.button_oculto {
-  background-color: #60265B;
+/*.button:hover,
+.button-post:hover {
+    background-color: var(--color-yellow);
+}*/
+
+.button-post{
+  margin: 10px 0px 10px 320px;
+}
+
+/*3.7. UserInfo*/
+
+.user-container {
+    padding-top: 5px;
+    background-color: var(--color-background);
+    border-bottom: 2px var(--color-line) solid;
+    width: 100%;
+    /*height: 300px;*/
+}
+
+.pad_10 {
+    /*display: flex;
+    flex-direction: column;*/
+    padding: 10px 0px;
+}
+
+
+.img-user-big {
+  width: 120px;
+  height: 120px;
+  margin: 10px auto;
+}
+
+/*3.8. LogOutButton*/
+.button-logout{
+  height: 30px;
+  padding: 0 5px;
+  background-color: var(--color-red);
+  /*letter-spacing: 2px;
+  color: var(--color-background);*/
+}
+
+/*3.9. Tab*/
+.tab-container {
+  max-width: 500px;
+  /*height: 35px;*/
+  margin: 10px auto 0;
+}
+
+.tab-container 
+ul,
+li,
+a {
+  height: 100%;
+  }
+
+.tab-container li {
+  width: 100%;
+  display: flex;
+}
+
+.tab-container button {
+  /*height: 100%;*/
+  width: 100%;
+  /*letter-spacing:2px;*/
+  color: var(--color-text-back);
+}
+
+/*4. CustomLink*/
+.link {
+  width: 50%;
+  /*background-color: var(--color-background);*/
+}
+
+.active {
+  background-color: var(--color-text-back);
+}
+.active button,
+.delete-alert p,
+.button-logout p {
+  color: var(--color-back);
+}
+
+/*4. Loader*/
+.loader-img{
+  height: 100%;
+  width: 100%;
 }

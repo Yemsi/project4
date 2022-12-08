@@ -1,1 +1,479 @@
 
+
+/*************************************************************************************/
+/*.f-color-pink {
+  color: var(--color-red);
+}
+/*NotFoundAlert
+.alert {
+  padding: 20px;
+  font-size: 50px;
+  text-align: center;
+}*/
+/*Loader
+.loader-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  background-color: var(--c-bg-gifts);
+}
+.loader-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  background-color: var(--c-bg-gifts);
+}*/
+/*
+/*.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  width: 100%;
+  }
+
+
+/*.user-info img {
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+.user-info span {
+  padding: 5px;
+  border-radius: 0 0 0 5px;
+  letter-spacing: 2px;
+  color: var(--color-background);
+  text-transform: uppercase;
+}
+
+.block{
+  display: block;
+}
+
+.form-area {
+  display: flex;
+  justify-content: center;
+  height: 150px;
+  background-color: #150714;
+  padding: 60px 0;
+}
+
+.photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 5px;
+}*/
+/*.post-button {
+  width: 70px;
+  margin-top: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: #250c23;
+  border: none;
+  padding: 4px 10px;
+}
+
+
+.post-button:hover {
+  cursor: pointer;
+}
+
+/*TweetList*/
+
+
+/*
+.loading {
+  display: flex;
+  justify-content: center;
+}
+
+.loading::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: 10px solid #dddddd;
+  border-top-color: #60256b;
+  border-radius: 50%;
+  animation: loading 1s linear infinite;
+}
+
+/*Tweet
+
+.tweet-card {
+  display: flex;
+  justify-content: center;
+  background-color: #250c23;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+/*.username {
+  font-size: 20px;
+  color: #fff;
+  padding-left: 5px;
+}
+
+.email {
+  color: #fff;
+  font-size: 12px;
+}
+
+.photo-tweet {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.tweet-text-area {
+  width: 350px;
+  color: #fff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 15px;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+/*.likes {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}*/
+/*
+.heart:hover {
+  cursor: pointer;
+}
+
+.number-likes {
+  color: #f50d5a;
+  padding-left: 5px;
+}
+
+.line {
+  color: white;
+}
+
+.trashcan-button {
+  background: none;
+  border: none;
+  display: flex;
+}
+
+.trashcan-button:hover {
+  cursor: pointer;
+}*/
+
+/*Landing Welcome*/
+
+/*.initial-page {
+  background-color: #2e132c;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}.logo {
+  width: 400px;
+}*/
+/*.pink {
+  background-color: var(--color-red);
+}
+.orange{
+  background-color: var(--color-orange);
+}
+.yellow{
+  background-color: var(--color-yellow);
+}
+.green{
+  background-color: var(--color-green);
+}
+.blue{
+  background-color: var(--color-blue);
+}
+.purple{
+  background-color: var(--color-purple);
+}
+*/
+
+/*.text-area {
+  width: 350px;
+  height: 70px;
+  background-color: #250c23;
+  color: #fff;
+}*/
+
+/*.tweetsList {
+  height: 100%;
+  background-color: #250c23;
+}*/
+/*.danger-text {
+  color: pink;
+}*/
+
+/*.danger-shadow {
+  color:yellow;
+  font-weight: bold;
+}
+/*Loading*/
+/*.loader-container{
+  /*display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  background-color: var(--color-background);
+}
+.loader-img{
+  height: 70px;
+  width: 140px;
+}*/
+
+/*.middle {
+  height: 275px;
+  background-color: #150714;
+ 
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column;
+   display: flex;
+}
+
+.posts {
+  height: 100%;
+  background-color: #250c23;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+*/
+/*botones profile
+
+.profile-name {
+  color: aliceblue;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+/*No hay.button_select  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #250c23;
+}
+
+.dark{
+  background-color: #250c23;
+  border: none;
+}
+.button_fav:hover,
+.button_post:hover {
+  cursor: pointer;
+}
+.button_active {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 3px 8px;
+  background-color: #60265B;
+  border: none;
+}
+.button_oculto {
+  background-color: #60265B;
+}
+*/
+/*welcome button
+.text-credit {
+  padding-left: 40px;
+}
+.line1 {
+  color: #fff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  padding-bottom: 35px;
+}
+
+.line2 {
+  color: #fff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  padding-bottom: 35px;
+}
+.button-main {
+  background-color: #00DA76;
+  width: 190px;
+  margin-top: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  padding: 4px 10px;
+}
+/*1c.align-center{
+  align-items: center;
+}*/
+
+
+
+/*Profile*/
+/*.header-profile {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  background-color: #250c23;
+}*/
+
+
+
+/*
+/*1.2.Login
+
+.login-container{
+  margin: auto;
+  width: 310px; 
+}
+
+.text{
+    padding: 30px 0;
+}
+.btn-sign{
+    position: relative;
+    display: block;
+    margin: 0 auto rem(40);
+    width: rem(310);
+    height: rem(60);
+    padding-left: rem(60);
+    background-color: blue;
+    /*font-family: 'Roboto', sans-serif;
+    font-size: rem(18);
+    border-radius: rem(3);
+    overflow: hidden;*/
+
+/*.btn-sign::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 60px;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+}*/
+
+
+/*Loading*/
+
+/*
+*/
+
+/*.tweet-user-img img{
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}*/
+/*.radio-container{
+  /*margin-top: 10px;
+  display: flex;
+  justify-content: space-between;*/
+  /*Background color
+.bg-yellow{
+  background-color: var(--color-yellow);
+}
+.bg-orange{
+  background-color: var(--color-orange);
+}
+.bg-red{
+  background-color: var(--color-red);
+}
+.bg-green{
+  background-color: var(--color-green);
+}
+.bg-blue{
+  background-color: var(--color-blue);
+}
+.bg-purple{
+  background-color: var(--color-purple);
+}*/
+/*.loader-img{
+  height: 70px;
+  width: 70px;
+}*/
+
+/*input[type=radio] {
+  /*border: 1px solid var(--color-white);
+  padding: 0.7em;
+  margin-inline: 1px;
+  /*-webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+}*/
+
+/*.name-google{
+  font-size: 24px;
+
+  .logo-profile {
+  width: 30px;
+}
+
+.logout {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 3px 8px;
+  background-color: #f50d5a;
+  border: none;
+}
+
+.logout:hover {
+  cursor: pointer;
+}
+}*/
+/*Tweet*/
+
+
+
+/*.delete-alert .h1 {
+  font-size: 20px;
+  font-weight: 500px;
+  margin-bottom: 8px;
+}
+
+.delete-alert p {
+  font-size: 15px;
+  color: red;
+}*/
+/*
+.delete-alert .buttons {
+      width: 250px;
+      height: 40px;
+      display: block;
+      border-radius:20px;
+      font-size: 16px;
+  }
+
+.delete-alert .cancel-btn {
+      margin-top: 10px;
+      border: 1px white solid;
+  }*/
+/*Register*/
+
+
+
+/*
+.register-container{
+  margin: auto;
+  padding: 50px;
+}
+
+form{
+  flex-direction: column;
+  display: flex;
+} */

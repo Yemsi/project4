@@ -7,8 +7,8 @@ import {
   updateDoc,
   getDoc,
 } from "firebase/firestore";
-import { tweetsCollectionRef } from "../firebase/configFirrebase";
-import { TweetsContext } from "../context/TweetContext";
+import { tweetsCollectionRef } from "../firebase/config";
+import { TweetsContext } from "../context/TweetsContext";
 import Swal from 'sweetalert2';
 
 function useTweetCollection() {
@@ -43,8 +43,8 @@ function useTweetCollection() {
       await deleteDoc(doc(tweetsCollectionRef, tweetId));
       await getTweets();
       await Swal.fire({
-        title: 'Delete',
-        text: 'Do you want to continue?',
+        
+        text: 'Deseas borrar el tweet?',
         icon: 'error',
         confirmButtonText: 'ok'
       })
