@@ -9,8 +9,14 @@ const LayoutProfile = () => {
 
     return (
         <div>
-            <HeaderProfile username={user.username} enableLogOut={true} />
-            <UserInfo color={user.color} photo={user.photo} username={user.username} enableTab={true} />
+            <HeaderProfile 
+                username={user.username} 
+                enableLogOut={true} />
+            <UserInfo 
+                color={user.color} 
+                photo={user.photo} 
+                username={user.username} 
+                enableTab={true} />
             <Outlet /> 
         </div>
     )

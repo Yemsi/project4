@@ -24,9 +24,9 @@ const ListTweets = ({ tweets }) => {
                             color={tweet.color}
                         />
                     ))
-                    :         <div>
-                    <span>No hay tweets</span>
-                </div>}
+                    :   <div>
+                            <span>No hay tweets</span>
+                        </div>}
             </div>
 
         </div>

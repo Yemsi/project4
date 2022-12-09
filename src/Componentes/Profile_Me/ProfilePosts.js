@@ -18,9 +18,7 @@ const ProfilePosts = () => {
     },[])
 
     return (
-        <div 
-        //className="layout-posts"
-        >
+        <div>
             {loadingTweets ? <Loader /> : <ListTweets tweets={tweetsUserList} />}
         </div>
     )

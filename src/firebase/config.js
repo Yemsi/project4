@@ -17,10 +17,10 @@ const getRefCollection = (collectionName) => {
 return collection(database, collectionName);
 }
 
-//AUTH
+//Authentification
 const googleProvider = new GoogleAuthProvider();
 const auth = getAuth();
-/* const persistence = setPersistence(auth, browserLocalPersistence); */
+
 
 export {googleProvider, auth, getRefCollection}
 export default firebaseApp;

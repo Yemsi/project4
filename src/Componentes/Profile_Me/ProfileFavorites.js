@@ -1,8 +1,6 @@
-/*import { useEffect } from "react";*/
 import { useContext } from "react";
 import { TweetsContext } from "../../context/TweetsContext";
 import { UserContext } from "../../context/UserContext";
-/*import useTweets from "../../hook/useTweets";*/
 import Loader from "../../Componentes/Loader";
 import ListTweets from "../../Componentes/Tweet/ListTweets";
 
@@ -12,7 +10,8 @@ const ProfileFavorites = () => {
     const { tweetsList, loadingTweets } = useContext(TweetsContext);
 
     const favoriteTweets = tweetsList.filter(post => {
-        console.log(`test: ${post.userLikes} == (${user.uid})`);
+        //console.log(`test: ${post.userLikes} == (${user.uid})`);
+        //? use: error: is not a component
         if (post.userLikes?.includes(user.uid)) {
             return post;
         }
