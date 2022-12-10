@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ReactComponent as ArrowBack } from '../../image/back.svg';//cambiar
 //import LogOutButton from '../../Componentes/LogOutButton';
 import logout from "../../image/logout.svg"
-import useAuth from '../hook/useAuth'
+import useAuth from '../../hook/useAuth'
 
 const HeaderProfile = ({ username, enableLogOut }) => {
     const {logOut} = useAuth();
