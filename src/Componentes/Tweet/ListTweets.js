@@ -2,7 +2,6 @@
 //style
 import "../../styles.css"
 import Tweet from "../../Componentes/Tweet/Tweet";
-//import NotFoundAlert from '../../Componentes/NotFoundAlert';
 
 const ListTweets = ({ tweets }) => {
 

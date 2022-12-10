@@ -19,8 +19,14 @@ const DeleteAlert = ({id, uid}) => {
         <div className="align-center alert">
             <div className="delete-alert align-center column">
                 <p>¿Estás segurx de borrar?</p>
-                <button className='welcome-button' onClick={() => deleteTweet(id, uid)}>Delete</button>
-                    <button className=' welcome-button' onClick={handleCanceleDelete}>Cancel</button>
+                <button 
+                    className='welcome-button' 
+                    onClick={() => deleteTweet(id, uid)}>Delete
+                </button>
+                    <button 
+                    className=' welcome-button' 
+                    onClick={handleCanceleDelete}>Cancel
+                    </button>
                 <div >
                     
                 </div>

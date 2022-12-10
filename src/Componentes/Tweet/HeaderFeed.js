@@ -19,13 +19,21 @@ const HeaderFeed = ({ color, photo}) => {
         <div className="header align-center">
             <div className="mg-auto flex-between-center">
                 <Link to="/profile-user/posts" onClick={handleLoading}>
-                    <img className={`header-photo border-${color}`} src={photo} alt="header-photo" />
+                    <img 
+                        className={`header-photo border-${color}`} 
+                        src={photo} 
+                        alt="header-photo" />
                 </Link>
                 <div className="logo-flag-distance">
-                    <img className="logo-flag-min" src={logoflag} alt="logo-flag" />
+                    <img 
+                        className="logo-flag-min" 
+                        src={logoflag} alt="logo-flag" />
                 </div>
                 <div className="logo-header-container flex-between-center">
-                    <img className="logo-DevUnited" src={logoDevUnited} alt="logo-devUnited" />
+                    <img 
+                        className="logo-DevUnited" 
+                        src={logoDevUnited} 
+                        alt="logo-devUnited" />
                 </div>  
             </div>
         </div>

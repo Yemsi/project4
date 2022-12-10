@@ -1,6 +1,5 @@
 //style
 import "../../styles.css";
-
 import { useState } from 'react';
 import { initialTweetFormState } from '../../Componentes/constant';
 import { useContext } from 'react';
@@ -12,7 +11,6 @@ const TweetForm = () => {
     const { user } = useContext(UserContext);
     const { addNewTweet } = useTweets();
 
-    //Funcion que obtiene la fecha actual
     const actualDate = () => {
         let actualDate = new Date(),
             month = "" + (actualDate.getMonth() + 1),
@@ -52,10 +50,13 @@ const TweetForm = () => {
                     src={user.photo} 
                     alt="image-user" />
                 <div className="column">
-                    <form className="column" onSubmit={handleSubmit}>
+                    <form 
+                        className="column" 
+                        onSubmit={handleSubmit}>
                         <textarea 
                             className="form-text-area"
-                            onChange={handleChange} value={formState.tweet} 
+                            onChange={handleChange} 
+                            value={formState.tweet} 
                             name="tweet" cols="40" rows="10" maxLength={200} 
                             placeholder="What's happening?">                           
                         </textarea>
@@ -63,8 +64,7 @@ const TweetForm = () => {
                                 <span className={`inline-block white-font ${formState.length === 200 && "bg-green"}`}>
                                     {formState.length}
                                 </span>
-                                <span 
-                                    className="red-font inline-block">
+                                <span className="red-font inline-block">
                                         200 max.
                                 </span>
                             </div>

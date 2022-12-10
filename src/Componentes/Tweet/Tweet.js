@@ -1,6 +1,5 @@
 //style
 import "../../styles.css";
-
 import EmptyHeart from '../../image/EmptyHeart.svg';
 import FilledHeart from '../../image/FilledHeart.svg';
 import { ReactComponent as DeleteButton } from '../../image/erase.svg';

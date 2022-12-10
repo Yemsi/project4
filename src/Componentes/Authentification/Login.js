@@ -14,12 +14,15 @@ const Login = () => {
             <h1>Welcome developer!</h1>
             <p className="mg-auto">Logéate para iniciar</p>
             <button className="welcome-button align-center" onClick={() => loginWithGoogle()}>
-                <img className="logoGoogle" src={logoGoogle} alt="logo google" />
+                <img 
+                    className="logoGoogle" 
+                    src={logoGoogle} 
+                    alt="logo google" />
                 <p className="welcome-button-text white-font">Sign in with Google</p>
             <hr/>
             </button>            
             <div className="mg-auto text-font">
-                    <p claseName="text-font">© 2020 Devs_united - <span className="red-font">BETA</span></p>
+                <p claseName="text-font">© 2020 Devs_united - <span className="red-font">BETA</span></p>
             </div>
 
         </div>
