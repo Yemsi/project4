@@ -22,7 +22,7 @@ const HeaderFeed = ({ color, photo}) => {
                     <img 
                         className={`header-photo border-${color}`} 
                         src={photo} 
-                        alt="header-photo" />
+                        alt="header" />
                 </Link>
                 <div className="logo-flag-distance">
                     <img 

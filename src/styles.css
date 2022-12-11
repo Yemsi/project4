@@ -130,12 +130,15 @@ textarea{
 /*1.1. LayoutAuth*/
 
 .layout-auth{
-  max-width: 1440px;
-  min-height: 100vh;
-  margin: auto;
-  padding: 0 50px;
-  /*display: flex;
-  align-items: center;*/
+  /*max-width: 1440px; 
+  min-height: 100vh;*/
+  
+  margin: 40px;
+  padding: none;
+  display: flex;
+  min-width: 30%;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
 }
 
@@ -143,7 +146,7 @@ textarea{
   display: grid;
   place-items: center;
   /*padding: 124px 0;*/
-  margin: 0 60px 0 0;
+  margin: auto;
 }
 
 .logo-flag{
@@ -234,7 +237,7 @@ input[value=green],
 .welcome-button {
   background-color: #4285f4;
   border-radius: 4px;
-  width: 350px;
+  width: 230px;
   /*border: none;
   margin-top: 20px;
   margin-bottom: 20px;*/
@@ -301,13 +304,13 @@ input[value=green],
 }
 
 .header-photo{
-  width: 33px;
-  height: 33px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
 }
 
 .logo-flag-distance{
-  margin: 0px 100px 0px 100px;
+  margin: 0px 10px 0px 90px;
 }
 
 .logo-flag-min {
@@ -324,7 +327,7 @@ input[value=green],
 
 /*3.3. HeaderProfile*/
 .pd-1{
-  margin: 0px 350px 0px 0px;
+  margin: 0px 90px 0px 0px;
 }
 
 .arrowback{
@@ -362,8 +365,8 @@ input[value=green],
 }
 .img-user, 
 .tweet-user-img img {
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   margin: 0 20px 0 0px;
 }
@@ -440,7 +443,7 @@ input[value=green],
 }
 
 .form-text-area {
-  width: 100%;
+  width: 260px;
   padding: 5px;
   height: 120px;
   font-size: 20px;
@@ -452,7 +455,7 @@ input[value=green],
 }
 
 .form-counter{
-  padding: 5px 0 0 0;
+  padding: 5px 30px 0px 10px;
 }
 
 .form span, 
@@ -466,7 +469,7 @@ input[value=green],
 }*/
 
 .button-post{
-  margin: 10px 0px 10px 320px;
+  margin: 10px 0px 10px 180px;
 }
 
 /*3.7. UserInfo*/
@@ -487,8 +490,8 @@ input[value=green],
 
 
 .img-user-big {
-  width: 120px;
-  height: 120px;
+  width: 50px;
+  height: 50px;
   margin: 10px auto;
 }
 
@@ -546,4 +549,51 @@ a {
 .loader-img{
   height: 100%;
   width: 100%;
+}
+@media screen and (min-width: 420px) {
+  .layout-auth{
+  margin: auto;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: unset;
+  }
+  .welcome-button {
+    width: 350px;
+  }
+  .logo-flag-container{
+    margin: 0 60px 0 0;
+  }
+  .logo-flag-distance{
+    margin: 0px 100px 0px 60px;
+  }
+  .form-text-area {
+    width: 100%;
+  }
+  .img-user {
+    width: 50px;
+    height: 50px;
+  }
+  .form-counter {
+    padding: 5px 0px 0px 0px;
+}
+
+.button-post{
+  margin: 10px 0px 10px 320px;
+}
+.pd-1{
+  margin: 0px 350px 0px 0px;
+}
+
+.img-user-big {
+  width: 120px;
+  height: 120px;
+}
+.header-photo{
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+}
+
 }

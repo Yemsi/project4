@@ -7,10 +7,12 @@ import { UserContext } from "../context/UserContext";
 import { useNavigate } from "react-router-dom";
 
 const useUsers = () => {
-    const { setLoading, userRegistred, setUserRegistred, setUsersList, setGoogleUser } = useContext(UserContext);
+    const { setLoading, userRegistred, 
+      // eslint-disable-next-line
+      setUserRegistred, setUsersList, setGoogleUser } = useContext(UserContext);
     const navigate = useNavigate();
   
-    //Hook para obtener usuarios
+//get new user
     const getAllUsers = async () => {
       try {
         const querySnapshot = await getDocs(getRefCollection("users"));
@@ -26,15 +28,15 @@ const useUsers = () => {
       }
     }
   
-    //Hook para agregar usuario
     const addNewUser = async (userObject) => {
       try {
         const docRef = await addDoc(getRefCollection("users"), userObject);
         setLoading(false);
-        //Si se agrega un nuevo usuario la respuesta es true y esto da paso a que se ejecute la redireccion en el useEffect
+        //New user impulsa el useEffect
+        //// eslint-disable-next-line
         docRef && setUserRegistred(true);
         await getAllUsers();
-        setGoogleUser(); //Reset Google User luego de haberse registrado en Firestore
+        setGoogleUser(); 
       } catch (e) {
         console.error("Error adding user: ", e);
       }
@@ -43,6 +45,7 @@ const useUsers = () => {
     useEffect(() => {
       if (userRegistred) {
         navigate("/feed", { replace: true });
+        // eslint-disable-next-line
         setUserRegistred(false); //Reset user
       }
     }, [userRegistred])

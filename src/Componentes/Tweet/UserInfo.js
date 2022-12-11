@@ -8,7 +8,7 @@ const UserInfo = ({ color, photo, username, enableTab }) => {
         <div className='user-container'>
             <div className=" column">
                 <img 
-                className={`img-user-big mg-auto img-user align-center  border-${color}`} 
+                className={` mg-auto img-user img-user-big align-center  border-${color}`} 
                 src={photo} 
                 alt="user-img" />
                 <span className={`img-user-span inline-block mg-auto font-press-2p bg-${color}`}>

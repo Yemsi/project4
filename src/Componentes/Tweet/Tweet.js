@@ -52,10 +52,10 @@ const Tweet = ({ id, tweet, username, uid, date, likes, userLikes, img, color })
         <div className="tweet-container">
             {user && uid === user.uid ?
                 <Link to={"/profile-user/posts"} onClick={handleLoading} className="tweet-user-img">
-                    <img claseName={img-user} src={img} alt="image-user" />
+                    <img claseName={img-user} src={img} alt="user" />
                 </Link>
                 : <Link to={"/profile-user-B"} onClick={handleUserBInfo} className="tweet-user-img">
-                    <img claseName={img-user} src={img} alt="image-user" />
+                    <img claseName={img-user} src={img} alt="other user" />
                 </Link>
             }
             <div className="tweet-info column">
@@ -64,7 +64,9 @@ const Tweet = ({ id, tweet, username, uid, date, likes, userLikes, img, color })
                         <span className={`user-name bg-${color}`}>{username}</span>
                         <span>{` - ${dateSensitive(date)}.`}</span>
                     </div>
-                    {user && uid === user.uid && <button claseName="trash-button" onClick={handleDelete}><DeleteButton/></button>}
+                    {user && uid === user.uid && 
+                    <button claseName="trash-button" onClick={handleDelete}><DeleteButton/>
+                    </button>}
                 </div>
                 <div className="tweet-text">
                     <p>{tweet}</p>

@@ -5,7 +5,7 @@ import flaglogo from "../../image/flaglogo.svg";
 
 const LayoutAuth = () => {
     return (
-        <div className="layout-auth align-center"> 
+        <div className="layout-auth "> 
             <div className="logo-flag-container">                
                 <img className="logo-flag" src={flaglogo} alt="flag logo" />
             </div>

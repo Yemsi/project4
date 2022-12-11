@@ -48,7 +48,7 @@ const TweetForm = () => {
                 <img 
                     className="img-user" 
                     src={user.photo} 
-                    alt="image-user" />
+                    alt="user" />
                 <div className="column">
                     <form 
                         className="column" 

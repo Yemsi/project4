@@ -25,9 +25,17 @@ const ProfileUserB = () => {
 
     return (
         <div>
-            <HeaderProfile username={userB.username} enableLogOut={false} ></HeaderProfile>
-            <UserInfo color={userB.color} photo={userB.photo} username={userB.username} enableTab={false}></UserInfo>
-            {/* Pasar como props la lista de tweets (tweetsUserList) a renderizar */}
+            <HeaderProfile 
+                username={userB.username} 
+                enableLogOut={false} >
+            </HeaderProfile>
+            <UserInfo 
+                color={userB.color} 
+                photo={userB.photo} 
+                username={userB.username} 
+                enableTab={false}>
+            </UserInfo>
+
             {loadingTweets ? <Loader /> : <ListTweets tweets={tweetsUserList} />}
         </div>
     )
