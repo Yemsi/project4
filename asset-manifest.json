@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/Yemsi/Project4DevCom.git/static/css/main.43e6d67f.css",
-    "main.js": "/Yemsi/Project4DevCom.git/static/js/main.78ac6915.js",
-    "static/js/787.b4dd0f93.chunk.js": "/Yemsi/Project4DevCom.git/static/js/787.b4dd0f93.chunk.js",
-    "static/media/LoadingLogo.png": "/Yemsi/Project4DevCom.git/static/media/LoadingLogo.d531c5ab45f46ce83395.png",
-    "static/media/flaglogo.svg": "/Yemsi/Project4DevCom.git/static/media/flaglogo.0ba75cc5bb44078308541997bbbf3c66.svg",
-    "static/media/devUnitedlogo.svg": "/Yemsi/Project4DevCom.git/static/media/devUnitedlogo.3e57e339209cb5b55448fe1d14ee2fba.svg",
-    "static/media/logoGoogle.svg": "/Yemsi/Project4DevCom.git/static/media/logoGoogle.59ecfc59863caaac8cc8affa50bc34a5.svg",
-    "index.html": "/Yemsi/Project4DevCom.git/index.html",
-    "static/media/back.svg": "/Yemsi/Project4DevCom.git/static/media/back.67f326fdb4a7dc38bc5ebacc9c86fbb5.svg",
-    "static/media/EmptyHeart.svg": "/Yemsi/Project4DevCom.git/static/media/EmptyHeart.0a53b79ec9068c88b9bac5df1c4c8ecc.svg",
-    "static/media/erase.svg": "/Yemsi/Project4DevCom.git/static/media/erase.1422f5fcc9a8f9fafa327f02d8da9f65.svg",
-    "static/media/FilledHeart.svg": "/Yemsi/Project4DevCom.git/static/media/FilledHeart.cfe63298cab40dd6f24591ea00916a33.svg",
-    "static/media/logout.svg": "/Yemsi/Project4DevCom.git/static/media/logout.29c399471635858ea35868811fd9f031.svg",
-    "main.43e6d67f.css.map": "/Yemsi/Project4DevCom.git/static/css/main.43e6d67f.css.map",
-    "main.78ac6915.js.map": "/Yemsi/Project4DevCom.git/static/js/main.78ac6915.js.map",
-    "787.b4dd0f93.chunk.js.map": "/Yemsi/Project4DevCom.git/static/js/787.b4dd0f93.chunk.js.map"
+    "main.css": "/Yemsi/project4.git/static/css/main.43e6d67f.css",
+    "main.js": "/Yemsi/project4.git/static/js/main.94638589.js",
+    "static/js/787.b4dd0f93.chunk.js": "/Yemsi/project4.git/static/js/787.b4dd0f93.chunk.js",
+    "static/media/LoadingLogo.png": "/Yemsi/project4.git/static/media/LoadingLogo.d531c5ab45f46ce83395.png",
+    "static/media/flaglogo.svg": "/Yemsi/project4.git/static/media/flaglogo.0ba75cc5bb44078308541997bbbf3c66.svg",
+    "static/media/devUnitedlogo.svg": "/Yemsi/project4.git/static/media/devUnitedlogo.3e57e339209cb5b55448fe1d14ee2fba.svg",
+    "static/media/logoGoogle.svg": "/Yemsi/project4.git/static/media/logoGoogle.59ecfc59863caaac8cc8affa50bc34a5.svg",
+    "index.html": "/Yemsi/project4.git/index.html",
+    "static/media/back.svg": "/Yemsi/project4.git/static/media/back.67f326fdb4a7dc38bc5ebacc9c86fbb5.svg",
+    "static/media/EmptyHeart.svg": "/Yemsi/project4.git/static/media/EmptyHeart.0a53b79ec9068c88b9bac5df1c4c8ecc.svg",
+    "static/media/erase.svg": "/Yemsi/project4.git/static/media/erase.1422f5fcc9a8f9fafa327f02d8da9f65.svg",
+    "static/media/FilledHeart.svg": "/Yemsi/project4.git/static/media/FilledHeart.cfe63298cab40dd6f24591ea00916a33.svg",
+    "static/media/logout.svg": "/Yemsi/project4.git/static/media/logout.29c399471635858ea35868811fd9f031.svg",
+    "main.43e6d67f.css.map": "/Yemsi/project4.git/static/css/main.43e6d67f.css.map",
+    "main.94638589.js.map": "/Yemsi/project4.git/static/js/main.94638589.js.map",
+    "787.b4dd0f93.chunk.js.map": "/Yemsi/project4.git/static/js/787.b4dd0f93.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.43e6d67f.css",
-    "static/js/main.78ac6915.js"
+    "static/js/main.94638589.js"
   ]
 }
